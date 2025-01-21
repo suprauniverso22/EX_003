@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Compleja</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #bubble {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin: -50px 0 0 -50px;
+            background: radial-gradient(circle, gold, darkgoldenrod);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            animation: spin 5s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .bird {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            animation: fly 4s linear infinite;
+        }
+        .bird.blue { background-color: lightblue; }
+        .bird.yellow { background-color: lightyellow; }
+        .bird.pink { background-color: lightpink; }
+        @keyframes fly {
+            0% { transform: translate(-50px, -50px); }
+            25% { transform: translate(50px, -50px); }
+            50% { transform: translate(50px, 50px); }
+            75% { transform: translate(-50px, 50px); }
+            100% { transform: translate(-50px, -50px); }
+        }
+    </style>
+</head>
+<body>
+    <div id="bubble"></div>
+    <div class="bird blue" style="top: 40%; left: 40%;"></div>
+    <div class="bird yellow" style="top: 60%; left: 40%;"></div>
+    <div class="bird pink" style="top: 50%; left: 60%;"></div>
+    <script>
+        // JavaScript can be used here for more complex animations and interactions
+    </script>
+</body>
+</html>
